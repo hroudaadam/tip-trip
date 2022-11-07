@@ -1,0 +1,8 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+
+$theme-colors: (
+  primary: $teal-400
+);
+
+@import "bootstrap";

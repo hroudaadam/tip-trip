@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>
+        <!-- <div>
             <nav>
                 <router-link :to="{name: 'home'}">Home</router-link>
                 <router-link :to="{name: 'user-trips'}">My trips</router-link>
@@ -11,12 +11,9 @@
                 <router-link :to="{name: 'user-profile'}">User profile</router-link>
                 <router-link :to="{name: 'about'}">About</router-link>
             </nav>
-        </div>
+        </div> -->
+        <RouterView />
     </div>
-
-    <RouterView />
-
-    <button class="btn btn-primary">Button</button>
 </template>
 
 <script setup>
