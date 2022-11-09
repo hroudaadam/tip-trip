@@ -19,7 +19,7 @@
                         </li>
                     </ul>
                     <div>
-                        <button type="button" class="btn btn-primary">Přihlásit se</button>
+                        <router-link type="button" class="btn btn-primary" :to="{name: 'sign-in'}">Přihlásit se</router-link>
                     </div>
                 </div>
             </div>
