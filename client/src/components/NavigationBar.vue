@@ -12,10 +12,10 @@
                 <div class="d-flex ms-auto">
                     <ul class="navbar-nav">
                         <li class="nav-item px-1">
-                            <router-link class="nav-link active fw-bolder" href="#">Domů</router-link>
+                            <router-link class="nav-link active fw-bolder" :to="{name: 'home'}">Domů</router-link>
                         </li>
                         <li class="nav-item px-1">
-                            <router-link class="nav-link fw-bolder" :to="{name: ''}">Výlety</router-link>
+                            <router-link class="nav-link fw-bolder" :to="{name: 'trips'}">Výlety</router-link>
                         </li>
                     </ul>
                     <router-link type="button" class="btn btn-primary ms-3" :to="{name: 'sign-in'}">Přihlásit se</router-link>
