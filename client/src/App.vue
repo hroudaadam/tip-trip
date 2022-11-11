@@ -1,7 +1,10 @@
 <template>
     <div>
         <NavigationBar></NavigationBar>
-        <RouterView />
+        <RouterView class="mb-3" />
+        <footer class="footer d-flex justify-content-center mt-auto py-3 bg-light">
+            Hello
+        </footer>
     </div>
 </template>
 
@@ -12,6 +15,6 @@ import NavigationBar from "./components/NavigationBar.vue";
 <style scoped>
 nav {
     display: flex;
-    gap: 1rem
+    gap: 1rem;
 }
 </style>

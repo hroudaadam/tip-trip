@@ -4,9 +4,9 @@ import router from "./router";
 
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./assets/styles/style.css";
 import "./assets/styles/bootstrap-custom.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "./assets/styles/style.css";
 
 const app = createApp(App);
 app.use(router);

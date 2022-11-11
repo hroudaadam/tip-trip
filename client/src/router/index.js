@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+import WelcomeView from "../views/WelcomeView.vue";
 import TripsView from "../views/TripsView.vue";
 import UserTripsView from "../views/UserTripsView.vue";
 import TripFormView from "../views/TripFormView.vue";
@@ -16,7 +17,7 @@ const router = createRouter({
         {
             path: "/",
             name: "home",
-            redirect: { name: "trips" }
+            component: WelcomeView
         },
         {
             path: "/trips",
