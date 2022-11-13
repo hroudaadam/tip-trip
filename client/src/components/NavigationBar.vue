@@ -1,6 +1,6 @@
 <template>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid">
                 <router-link class="navbar-brand" :to="{name: 'home'}">
                     logo placeholder
@@ -11,7 +11,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="d-flex ms-auto">
+                    <div class="d-flex ms-auto align-items-start flex-column flex-lg-row">
                         <ul class="navbar-nav">
                             <li class="nav-item px-1">
                                 <router-link active-class="nav-link__active" class="nav-link text-body fw-semibold" :to="{ name: 'home' }">&nbsp;Domů&nbsp;</router-link>
@@ -20,7 +20,7 @@
                                 <router-link active-class="nav-link__active" class="nav-link text-body fw-semibold" :to="{ name: 'trips' }">&nbsp;Výlety&nbsp;</router-link>
                             </li>
                         </ul>
-                        <router-link class="btn btn-primary ms-3" :to="{ name: 'sign-in' }">
+                        <router-link class="btn btn-primary ms-lg-3" :to="{ name: 'sign-in' }">
                             Přihlásit
                             <!-- <i class="bi bi-box-arrow-in-right"></i> -->
                         </router-link>
