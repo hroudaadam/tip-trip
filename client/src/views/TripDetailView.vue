@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="card mb-3 card-style"> <!-- flex-column -->
+        <div class="card mb-3 card-style">
             <div class="row g-0">
                 <div class="col-md-3">
                     <img src="src/assets/images/image2.png" class="card-img-top image rounded" alt="Ilustracni foto" />
