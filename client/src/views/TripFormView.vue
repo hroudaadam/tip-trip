@@ -1,9 +1,7 @@
 <template>
     <div>
-        <h1>This is trip form page</h1>
-        <div>Form mode: {{state.formMode}}</div>
         <form>
-            <h2 style="margin-top: 2rem;">Nový trip</h2>
+            <h1>Nový trip</h1>
             <div class="row" style="margin-top: 1rem;">
                     <div class="col-md-3 ms-md-auto">
                         <label for="inputTripName" class="form-label">Název tripu</label>
@@ -21,21 +19,24 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 1rem;">
-                    <div class="col-md-3 ms-md-auto">
-                        <label for="inputDescription" class="form-label">Popis trasy</label>
-                    </div>
-                    <div class="col-md-9 ms-md-auto">
-                    <input type="description" class="form-control" id="inputTripDescription">
+                <div class="col-md-3 ms-md-auto">
+                    <label for="inputDescription" class="form-label">Popis trasy</label>
+                </div>
+                <div class="col-md-9 ms-md-auto">
+                    <textarea class="form-control" id="inputTripDescription" rows="4"></textarea>
                 </div>
             </div>
             <div class="row" style="margin-top: 1rem;">
-                <div class="">
+                <div class="col-md-3 ms-md-auto">
                     <label for="pictures" class="form-label">Obrázky z tripu</label>
+                </div>
+                <div class="col-md-9 ms-md-auto">
+                    <input class="form-control" type="file" id="formFile">
                 </div>
             </div>
 
             <h2 style="margin-top: 2rem;">Charakteristika</h2>
-            <div class="row justify-content-center" style="margin-top: 1rem;">
+            <div class="row" style="margin-top: 1rem;">
                 <div class="row col-md-6 ms-md-auto">
                     <div class="col-md-3 ms-md-auto">
                         <label for="inputTripLength" class="form-label">Délka trasy</label>
@@ -53,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" style="margin-top: 1rem;">
+            <div class="row justify-content-center" style="margin-top: 2rem;">
                 <div class="row col-md-6 ms-md-auto">
                     <div class="col-md-3 ms-md-auto">
                         <label for="inputDescription" class="form-label">Časová náročnost</label>
