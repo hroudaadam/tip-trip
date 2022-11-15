@@ -1,11 +1,16 @@
 <template>
     <div class="container">
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-bottom: 0.5rem;">
+            <button type="button" class="btn btn-primary">Upravit trip</button>
+            <button type="button" class="btn btn-primary">+ Do batuzku</button>
+            <button type="button" class="btn btn-danger active me-md-2">- Z batuzku</button>
+        </div>
         <div class="card mb-3 card-style">
-            <div class="row g-0">
-                <div class="col-md-3">
+            <div class="d-flex align-items-center">
+                <div class="container large"><div class="flex-shrink-0">
                     <img src="src/assets/images/image2.png" class="card-img-top image rounded" alt="Ilustracni foto" />
-                </div>
-                <div class="col-md-9">
+                </div></div>
+                <div class="flex-grow-1 ms-3">
                     <div class="card-body">
                         <h1>Název výletu</h1>
                         <div class="card-subtitle mb-2 text-muted" style="margin-top: 1rem; margin-bottom: 1rem;">
@@ -58,7 +63,6 @@
                 </div>
             </div>
         </div>
-        <!-- doplnit grid s obrazky-->
         <div class="d-flex flex-row justify-content-center" style="margin-top: 2rem;">
             <div class="p-3">
                 <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
