@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <div class="d-flex justify-content-between mb-3">
+            <div class="d-flex justify-content-between">
                 <form class="d-inline-flex">
                     <input class="search-input form-control" type="search" placeholder="Hledat" />
                     <button class="btn btn-primary ms-1" type="submit">
@@ -13,7 +13,7 @@
                     <i class="bi bi-plus-lg d-sm-none"></i>
                 </router-link>
             </div>
-            <div class="testimonial-group">
+            <div class="testimonial-group mt-3">
                 <div class="d-flex">
                     <button class="filter-item filter-item__active text-body fw-semibold" to="">Vše</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Z batůžku</button>
@@ -22,15 +22,11 @@
                     <button class="filter-item text-body fw-semibold ms-3" to="">Nově přidané</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Celodenní</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Krátké</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Vysokohorské</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Pro děti</button>
                 </div>
             </div>
-            <div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
-                    <div class="col py-2" v-for="i in [1, 2, 3, 4, 5, 6, 7, 8, 9]" v-bind:key="i">
-                        <TripCard></TripCard>
-                    </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mt-3">
+                <div class="col py-2" v-for="i in [1, 2, 3, 4, 5]" v-bind:key="i">
+                    <TripCard></TripCard>
                 </div>
             </div>
         </div>
@@ -42,7 +38,6 @@ import TripCard from "../components/TripCard.vue";
 </script>
 
 <style scoped>
-
 @media screen and (min-width: 576px) {
     .search-input {
         min-width: 350px;

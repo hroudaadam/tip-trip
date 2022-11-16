@@ -23,10 +23,10 @@
                                 </router-link>
                             </li>
                         </ul>
-                        <!-- <router-link class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
+                        <router-link class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
                             Přihlásit
-                        </router-link> -->
-                        <div class="btn-group ms-lg-3">
+                        </router-link>
+                        <!-- <div class="btn-group ms-lg-3">
                             <button class="user-profile-btn btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
                                 <i class="h4 bi bi-person"></i>
                             </button>
@@ -36,7 +36,7 @@
                                 <hr class="dropdown-divider" />
                                 <button class="dropdown-item">Odhlásit</button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
