@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{ name: 'trip-detail', params: { tripId: 1 } }" class="card" style="width: 18rem">
+    <router-link :to="{ name: 'trip-detail', params: { tripId: 1 } }" class="card">
         <img src="src/assets/images/image2.png" style="height: 12rem" class="card-img-top" alt="..." />
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
