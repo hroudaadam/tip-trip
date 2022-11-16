@@ -8,48 +8,29 @@
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
-                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary"> Přidat trip </router-link>
+                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary ms-1">
+                    <span class="d-none d-sm-inline"> Přidat trip </span>
+                    <i class="bi bi-plus-lg d-sm-none"></i>
+                </router-link>
             </div>
-            <div>
-                <nav class="nav">
-                    <a class="nav-link active" href="#">Active</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                    <a class="nav-link" href="#">Link</a>
-                </nav>
-            </div>
-            <div>
-                <div class="d-flex justify-content-between">
-                    <TripCard v-for="i in [1, 2, 3, 4]" v-bind:key="i"></TripCard>
-                </div>
-                <div class="d-flex justify-content-between mt-5">
-                    <TripCard v-for="i in [1, 2, 3, 4]" v-bind:key="i"></TripCard>
+            <div class="testimonial-group">
+                <div class="d-flex">
+                    <button class="filter-item filter-item__active text-body fw-semibold" to="">Vše</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Populární</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Nově přidané</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Celodenní</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Krátké</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Vysokohorské</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Pro děti</button>
                 </div>
             </div>
-            <nav class="mt-3">
-                <ul class="pagination justify-content-center text-primary">
-                    <li class="page-item disabled">
-                        <a class="page-link">
-                            <i class="bi bi-caret-left"></i>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link">1</a></li>
-                    <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item"><a class="page-link">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link">
-                            <i class="bi bi-caret-right"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+                    <div class="col py-2" v-for="i in [1, 2, 3, 4, 5, 6, 7, 8, 9]" v-bind:key="i">
+                        <TripCard></TripCard>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -58,4 +39,26 @@
 import TripCard from "../components/TripCard.vue";
 </script>
 
-<style scoped></style>
+<style scoped>
+.filter-item {
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline;
+}
+
+.filter-item__active {
+    text-decoration: underline;
+    text-decoration-color: var(--bs-primary);
+    text-decoration-thickness: 3px;
+}
+
+.testimonial-group > .d-flex {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.testimonial-group > .d-flex > div {
+    display: inline-block;
+}
+</style>

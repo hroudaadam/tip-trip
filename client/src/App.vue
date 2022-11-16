@@ -2,7 +2,9 @@
     <NavigationBar></NavigationBar>
 
     <main class="flex-shrink-0 my-3">
-        <RouterView class="container" />
+        <div class="container">
+            <RouterView/>
+        </div>
     </main>
     <AppFooter></AppFooter>
 </template>

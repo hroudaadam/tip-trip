@@ -1,7 +1,6 @@
 <template>
     <div class="container" style="margin-top: 5rem;">
-        <h1>Přihlásit</h1>
-        <h2 style="margin-top: 2rem;">Vítej zpět!</h2>
+        <p class="h2">Vytvořit účet</p>
         <div class="container" style="margin-top: 3rem;">
             <div class="row">
                 <div class="col-md-6">
@@ -50,13 +49,10 @@
                             <button type="submit" class="btn btn-primary">Vytvořit účet</button>
                         </div>
                         <div style="margin-top: 1rem; margin-bottom: 1rem;">
-                            Již máš účet?&nbsp
+                            Již máš účet?&nbsp;
                             <a href="#/sign-in" class="link-primary">Přihlásit se</a>
                         </div>
                     </div></form>
-                </div>
-                <div class="col-md-6">
-                    <img src="src/assets/images/image2.png" class="card-img-top image rounded" alt="Ilustracni foto" />
                 </div>
             </div>
         </div>

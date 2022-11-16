@@ -1,9 +1,9 @@
 <template>
     <router-link :to="{ name: 'trip-detail', params: { tripId: 1 } }" class="card">
-        <img src="src/assets/images/image2.png" style="height: 12rem" class="card-img-top" alt="..." />
+        <img src="src/assets/images/trip1.jpg" class="trip-image card-img-top" alt="..." />
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
-                <div class="h5 card-title">Rozhledna Mackova hora asdsa dsa as dsa</div>
+                <div class="h5 card-title">Rozhledna Mackova hora</div>
                 <div class="card-subtitle mb-2 text-muted">
                     <i class="bi bi-geo-alt-fill"></i>
                     Nové Strašecí
@@ -26,4 +26,9 @@
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.trip-image {
+    height: 12rem;
+    object-fit: cover;
+}
+</style>

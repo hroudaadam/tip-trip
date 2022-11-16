@@ -9,7 +9,7 @@
             <div class="d-flex align-items-start">
                 <div class="clearfix">
                     <div class="col-md-6 float-md-start">
-                        <img src="src/assets/images/image2.png" class="card-img-top image rounded" alt="Ilustracni foto" />
+                        <img src="src/assets/images/trip1.jpg" class="card-img-top image rounded" alt="Ilustracni foto" />
                     </div>
                     <div class="col-md-6 float-md-start">
                         <div class="card-body" style="margin-left:1rem;">
@@ -67,19 +67,19 @@
         </div>
         <div class="d-flex flex-column d-lg-flex flex-lg-row justify-content-center" style="margin-top: 2rem;">
             <div class="p-3">
-                <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
+                <img src="src/assets/images/trip1.jpg" class="image rounded image-card" alt="Ilustracni foto"/>
             </div>
             <div class="p-3">
-                <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
+                <img src="src/assets/images/trip1.jpg" class="image rounded image-card" alt="Ilustracni foto"/>
             </div>
             <div class="p-3">
-                <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
+                <img src="src/assets/images/trip1.jpg" class="image rounded image-card" alt="Ilustracni foto"/>
             </div>
             <div class="p-3">
-                <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
+                <img src="src/assets/images/trip1.jpg" class="image rounded image-card" alt="Ilustracni foto"/>
             </div>
             <div class="p-3">
-                <img src="src/assets/images/image2.png" class="image rounded image-card" alt="Ilustracni foto"/>
+                <img src="src/assets/images/trip1.jpg" class="image rounded image-card" alt="Ilustracni foto"/>
             </div>
         </div>
         <div class="container" style="margin-top: 4rem;">
