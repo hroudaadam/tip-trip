@@ -2,8 +2,8 @@
     <div class="container">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-bottom: 0.5rem;">
             <button type="button" class="btn btn-primary">Upravit trip</button>
-            <button type="button" class="btn btn-primary">+ Do batůžku</button>
-            <button type="button" class="btn btn-danger active me-md-2">- Z batůžku</button>
+            <!-- <button type="button" class="btn btn-primary">+ Do batůžku</button> -->
+            <!-- <button type="button" class="btn btn-danger active me-md-2">- Z batůžku</button> -->
         </div>
         <div class="card mb-3 card-style">
             <div class="d-flex align-items-start">

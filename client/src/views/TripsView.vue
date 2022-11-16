@@ -3,12 +3,12 @@
         <div>
             <div class="d-flex justify-content-between mb-3">
                 <form class="d-inline-flex">
-                    <input class="form-control" type="search" placeholder="Hledat" />
+                    <input class="search-input form-control" type="search" placeholder="Hledat" />
                     <button class="btn btn-primary ms-1" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
-                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary ms-1">
+                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary ms-1 px-3">
                     <span class="d-none d-sm-inline"> Přidat trip </span>
                     <i class="bi bi-plus-lg d-sm-none"></i>
                 </router-link>
@@ -16,6 +16,8 @@
             <div class="testimonial-group">
                 <div class="d-flex">
                     <button class="filter-item filter-item__active text-body fw-semibold" to="">Vše</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Z batůžku</button>
+                    <button class="filter-item text-body fw-semibold ms-3" to="">Vytvořené</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Populární</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Nově přidané</button>
                     <button class="filter-item text-body fw-semibold ms-3" to="">Celodenní</button>
@@ -40,6 +42,12 @@ import TripCard from "../components/TripCard.vue";
 </script>
 
 <style scoped>
+
+@media screen and (min-width: 576px) {
+    .search-input {
+        min-width: 350px;
+    }
+}
 .filter-item {
     background: none;
     border: none;

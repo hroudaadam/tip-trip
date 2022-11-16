@@ -29,7 +29,7 @@
 
 .jumbo-text {
     background-color: #333333;
-    background-color: rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0.4);
     text-align: center;
 }
 

@@ -1,66 +1,52 @@
 <template>
-    <div class="container" style="margin-top: 5rem;">
-        <p class="h2">Vytvořit účet</p>
-        <div class="container" style="margin-top: 3rem;">
-            <div class="row">
-                <div class="col-md-6">
-                    <form><div class="container">
-                        <div class="row">
-                            <div class="col-md-3 ms-md-auto">
-                                <label for="inputJmeno" class="form-label">Jméno</label>
-                            </div>
-                            <div class="col-md-9 ms-md-auto">
-                                <input type="jmeno" class="form-control" id="inputJmeno">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 1rem;">
-                            <div class="col-md-3 ms-md-auto">
-                                <label for="inputPrijmeni" class="form-label">Příjmení</label>
-                            </div>
-                            <div class="col-md-9 ms-md-auto">
-                                <input type="prijmeni" class="form-control" id="inputPrijmeni">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 1rem;">
-                            <div class="col-md-3 ms-md-auto">
-                                <label for="inputEmail" class="form-label">Email</label>
-                            </div>
-                            <div class="col-md-9 ms-md-auto">
-                                <input type="email" class="form-control" id="inputEmail">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 3rem;">
-                            <div class="col-md-3 ms-md-auto">
-                                <label for="inputPassword1" class="form-label">Heslo</label>
-                            </div>
-                            <div class="col-md-9 ms-md-auto">
-                                <input type="password" class="form-control" id="inputPassword1">
-                            </div>
-                        </div>
-                        <div class="row" style="margin-top: 1rem;">
-                            <div class="col-md-3 ms-md-auto">
-                                <label for="inputPassword2" class="form-label">Heslo znovu</label>
-                            </div>
-                            <div class="col-md-9 ms-md-auto">
-                                <input type="password" class="form-control" id="inputPassword2">
-                            </div>
-                        </div>
-                        <div class="d-grid gap-2" style="margin-top: 2rem;">
-                            <button type="submit" class="btn btn-primary">Vytvořit účet</button>
-                        </div>
-                        <div style="margin-top: 1rem; margin-bottom: 1rem;">
-                            Již máš účet?&nbsp;
-                            <a href="#/sign-in" class="link-primary">Přihlásit se</a>
-                        </div>
-                    </div></form>
-                </div>
+    <form class="sign-in-form mx-auto">
+        <p class="h2 mb-3">Vytvoření účtu</p>
+        <div class="row">
+            <div class="col-md-3 ms-md-auto">
+                <label for="userName" class="form-label">Uživatelské jméno</label>
+            </div>
+            <div class="col-md-9 ms-md-auto">
+                <input type="text" class="form-control" id="userName" />
             </div>
         </div>
-    </div>
+        <div class="row mt-3">
+            <div class="col-md-3 ms-md-auto">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="col-md-9 ms-md-auto">
+                <input type="email" class="form-control" id="email" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-3 ms-md-auto">
+                <label for="password" class="form-label">Heslo</label>
+            </div>
+            <div class="col-md-9 ms-md-auto">
+                <input type="password" class="form-control" id="password" />
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-3 ms-md-auto">
+                <label for="verifyPassword" class="form-label">Ověření hesla</label>
+            </div>
+            <div class="col-md-9 ms-md-auto">
+                <input type="password" class="form-control" id="verifyPassword" />
+            </div>
+        </div>
+        <div class="d-grid gap-2 mt-3" >
+            <button type="submit" class="btn btn-primary">Registrovat se</button>
+        </div>
+        <div class="mt-3">
+            Máš už účet?&nbsp;
+            <router-link :to="{name: 'sign-in'}" class="link-primary">Přihlásit se</router-link>
+        </div>
+    </form>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style scoped>
+.sign-in-form {
+    max-width: 600px;
+}
 </style>

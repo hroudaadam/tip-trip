@@ -1,6 +1,6 @@
 <template>
     <p class="h2">Něco málo o Tip Tripu</p>
-    <p>
+    <p class="mt-3">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Phasellus enim erat, vestibulum vel,
         aliquam a, posuere eu, velit. Maecenas libero. Etiam neque. Integer malesuada. Etiam egestas wisi a erat. Morbi scelerisque luctus velit.
         Nullam sit amet magna in magna gravida vehicula. Et harum quidem rerum facilis est et expedita distinctio. Aliquam ante. Nullam eget nisl.

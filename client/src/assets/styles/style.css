@@ -13,13 +13,11 @@ body {
     height: 100%;
 }
 
-.btn-primary {
+.btn {
     border-radius: 20rem;
-    color: white;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.btn-danger {
-    border-radius: 20rem;
-    font-weight: bold;
+.btn-primary {
+    color: white;
 }
