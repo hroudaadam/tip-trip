@@ -8,9 +8,22 @@
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
-                <router-link :to="{name: 'trip-create'}" class="btn btn-primary">
-                    Přidat trip
-                </router-link>
+                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary"> Přidat trip </router-link>
+            </div>
+            <div>
+                <nav class="nav">
+                    <a class="nav-link active" href="#">Active</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Link</a>
+                </nav>
             </div>
             <div>
                 <div class="d-flex justify-content-between">

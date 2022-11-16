@@ -12,8 +12,9 @@ body {
     flex-direction: column;
     height: 100%;
 }
+
 .btn-primary {
-        border-radius: 20rem;
-        color: white;
-        font-weight: bold;
-    }
+    border-radius: 20rem;
+    color: white;
+    font-weight: bold;
+}

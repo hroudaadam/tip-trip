@@ -3,8 +3,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid">
                 <router-link class="navbar-brand" :to="{name: 'home'}">
-                    logo placeholder
-                    <!-- <img src="src/assets/images/logo.png" alt="" height="40" class="d-inline-block align-text-top" /> -->
+                    <img src="src/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
                 </router-link>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -20,9 +19,8 @@
                                 <router-link active-class="nav-link__active" class="nav-link text-body fw-semibold" :to="{ name: 'trips' }">&nbsp;Výlety&nbsp;</router-link>
                             </li>
                         </ul>
-                        <router-link class="btn btn-primary ms-lg-3" :to="{ name: 'sign-in' }">
+                        <router-link class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
                             Přihlásit
-                            <!-- <i class="bi bi-box-arrow-in-right"></i> -->
                         </router-link>
                     </div>
                 </div>
