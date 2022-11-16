@@ -72,8 +72,9 @@
                     </div>
                 </div>
             </div>
-
-            <button type="submit" class="btn btn-primary" style="margin-top: 1rem">Vytvořit nový trip</button>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Vytvořit nový trip</button>
+            </div>
         </form>
     </div>
 </template>
