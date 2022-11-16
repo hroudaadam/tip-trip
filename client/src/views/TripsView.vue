@@ -9,8 +9,8 @@
                     </button>
                 </form>
                 <router-link :to="{ name: 'trip-create' }" class="btn btn-primary ms-1 px-3">
+                    <i class="bi bi-plus-circle me-lg-2"></i>
                     <span class="d-none d-sm-inline"> Přidat trip </span>
-                    <i class="bi bi-plus-lg d-sm-none"></i>
                 </router-link>
             </div>
             <div class="testimonial-group mt-3">
@@ -38,7 +38,7 @@ import TripCard from "../components/TripCard.vue";
 </script>
 
 <style scoped>
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
     .search-input {
         min-width: 350px;
     }

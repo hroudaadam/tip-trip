@@ -39,10 +39,11 @@
                 <i class="bi bi-star"></i>
             </div>
         </div>
-        <div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-primary px-3">Upravit trip</button>
-            <button type="button" class="btn btn-primary">+ Do batůžku</button>
-            <button type="button" class="btn btn-danger active me-md-2">- Z batůžku</button>
+        <div class="d-flex gap-2 justify-content-end mt-3">
+            <button type="button" class="btn btn-primary px-3"><i class="bi bi-pencil me-2"></i>Upravit</button>
+            <button type="button" class="btn btn-secondary px-3"><i class="bi bi-x-circle me-2"></i>Odstranit</button>
+            <button type="button" class="btn btn-primary px-3"><i class="bi bi-plus-circle me-2"></i> Do batůžku</button>
+            <button type="button" class="btn btn-secondary px-3"><i class="bi bi-x-circle me-2"></i> Z batůžku</button>
         </div>
     </div>
 
