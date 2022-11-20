@@ -9,8 +9,8 @@
             </router-link>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
-            <div class="col py-2 py-lg-0" v-for="i in [1, 2, 3, 4]" v-bind:key="i">
-                <TripCard></TripCard>
+            <div class="col py-2 py-lg-0" v-for="trip in store.state.trips" v-bind:key="trip.id">
+                <TripCard :trip="trip"></TripCard>
             </div>
         </div>
     </div>
@@ -19,6 +19,7 @@
 <script setup>
 import TripCard from "../components/TripCard.vue";
 import WelcomeJumbotron from "../components/WelcomeJumbotron.vue";
+import store from "../store";
 </script>
 
 <style scoped></style>

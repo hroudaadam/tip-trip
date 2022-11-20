@@ -8,25 +8,27 @@
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
-                <router-link :to="{ name: 'trip-create' }" class="btn btn-primary ms-1 px-3">
+                <router-link v-if="store.getters.isSignedIn" :to="{ name: 'trip-create' }" class="btn btn-primary ms-1 px-3">
                     <i class="bi bi-plus-circle me-lg-2"></i>
                     <span class="d-none d-sm-inline"> Přidat trip </span>
                 </router-link>
             </div>
             <div class="testimonial-group mt-3">
                 <div class="d-flex">
-                    <button class="filter-item filter-item__active text-body fw-semibold" to="">Vše</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Z batůžku</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Vytvořené</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Populární</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Nově přidané</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Celodenní</button>
-                    <button class="filter-item text-body fw-semibold ms-3" to="">Krátké</button>
+                    <button 
+                        :disabled="f.name === state.filter"
+                        :name="f.name"
+                        :class="`filter-item text-body fw-semibold ms-3 ${f.name === state.filter ? 'filter-item__active' : ''}`" 
+                        v-for="f in filters" 
+                        v-bind:key="f.name"
+                        v-on:click="switchFilter" >
+                        {{f.text}}
+                    </button>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 mt-3">
-                <div class="col py-2" v-for="i in [1, 2, 3, 4, 5]" v-bind:key="i">
-                    <TripCard></TripCard>
+                <div class="col py-2" v-for="trip in store.state.trips" v-bind:key="trip.id">
+                    <TripCard :trip="trip"></TripCard>
                 </div>
             </div>
         </div>
@@ -34,7 +36,45 @@
 </template>
 
 <script setup>
+import { reactive } from "vue";
 import TripCard from "../components/TripCard.vue";
+import store from "../store";
+
+const state = reactive({
+    filter: "all",
+});
+
+const filters = [
+    {
+        name: "all",
+        text: "Vše"
+    },
+    {
+        name: "backpack",
+        text: "Z batůžku"
+    },
+    {
+        name: "created",
+        text: "Vytvořené"
+    },
+    {
+        name: "popular",
+        text: "Populární"
+    },
+    {
+        name: "long",
+        text: "Celodenní"
+    },
+    {
+        name: "short",
+        text: "Krátké"
+    },
+];
+
+const switchFilter = (e) => {
+    state.filter = e.target.name;
+};
+
 </script>
 
 <style scoped>

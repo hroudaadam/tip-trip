@@ -10,7 +10,7 @@
                     </p>
                     <form class="jumbo-search-form d-flex w-100">
                         <input class="form-control me-1 shadow-lg" type="search" placeholder="Hledat trip" />
-                        <button class="btn btn-primary shadow-lg" type="submit">
+                        <button class="btn btn-primary shadow-lg">
                             <i class="bi bi-search"></i>
                         </button>
                     </form>

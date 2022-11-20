@@ -1,5 +1,5 @@
 <template>
-    <p class="h2">Nový výlet</p>
+    <p class="h2">{{state.formMode == "new" ? 'Nový' : 'Upravit'}} výlet</p>
     <form class="mt-3">
         <div class="row">
             <div class="col-md-3 ms-md-auto">
@@ -30,7 +30,7 @@
                 <label for="pictures" class="form-label">Fotky z výletu</label>
             </div>
             <div class="col-md-9 ms-md-auto">
-                <input class="form-control" type="file" id="formFile" />
+                <input class="form-control" type="file" id="formFile" accept="image/png, image/jpeg" />
             </div>
         </div>
 
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-md-9">
                         <div class="input-group">
-                            <input type="tripLength" class="form-control" id="inputTripLength" />
+                            <input type="number" class="form-control" id="inputTripLength" />
                             <div class="input-group-text">km</div>
                         </div>
                     </div>
@@ -83,13 +83,7 @@
                         <label for="inputDescription" class="form-label">Náročnost</label>
                     </div>
                     <div class="col-md-9">
-                        <div class="d-flex w-50 justify-content-between align-items-start h4">
-                            <i class="bi bi-droplet-fill"></i>
-                            <i class="bi bi-droplet-fill"></i>
-                            <i class="bi bi-droplet"></i>
-                            <i class="bi bi-droplet"></i>
-                            <i class="bi bi-droplet"></i>
-                        </div>
+                        <RatingInput class="h4" icon="droplet"></RatingInput>
                     </div>
                 </div>
             </div>
@@ -102,6 +96,7 @@
 
 <script setup>
 import { onMounted, reactive } from "vue";
+import RatingInput from "../components/RatingInput.vue";
 
 const props = defineProps({
     tripId: String,
@@ -113,7 +108,7 @@ const state = reactive({
 
 onMounted(() => {
     const tripId = props.tripId;
-    if (tripId) {
+    if (tripId != null) {
         state.formMode = "edit";
     }
 });

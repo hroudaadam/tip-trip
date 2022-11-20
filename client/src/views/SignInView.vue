@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="d-grid gap-2 mt-3">
-            <button type="submit" class="btn btn-primary">Přihlásit se</button>
+            <button class="btn btn-primary" v-on:click="signIn">Přihlásit se</button>
         </div>
         <div class="mt-3">
             Nemáš účet?&nbsp;
@@ -27,7 +27,19 @@
     </form>
 </template>
 
-<script setup></script>
+<script setup>
+import store from "../store";
+import router from "../router";
+
+const signIn = () => {
+    store.commit("setUser", {
+        id: 1,
+        userName: "Tomáš Rafoun",
+        email: "tomas.rafoun@email.com",
+    });
+    router.push({ name: "home" });
+};
+</script>
 
 <style scoped>
 .sign-in-form {

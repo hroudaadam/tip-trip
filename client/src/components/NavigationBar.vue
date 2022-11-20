@@ -23,20 +23,20 @@
                                 </router-link>
                             </li>
                         </ul>
-                        <router-link class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
+                        <router-link v-if="!store.getters.isSignedIn" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
                             Přihlásit
                         </router-link>
-                        <!-- <div class="btn-group ms-lg-3">
+                        <div v-else class="btn-group ms-lg-3">
                             <button class="user-profile-btn btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
                                 <i class="h4 bi bi-person"></i>
                             </button>
                             <div class="dropdown-menu p-3 dropdown-menu-lg-end">
-                                <p class="fw-semibold">Emanuel Hermoso</p>
-                                <p>emanuel.hermoso@gmail.com</p>
+                                <p class="fw-semibold">{{store.state.user.userName}}</p>
+                                <p>{{store.state.user.email}}</p>
                                 <hr class="dropdown-divider" />
-                                <button class="dropdown-item">Odhlásit</button>
+                                <button class="dropdown-item" v-on:click="signOut">Odhlásit</button>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,13 @@
     </header>
 </template>
 
-<script setup></script>
+<script setup>
+import store from "../store";
+
+const signOut = () => {
+    store.commit("setUser", null);
+};
+</script>
 
 <style scoped>
 .nav-link:hover,

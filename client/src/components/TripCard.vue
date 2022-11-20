@@ -1,30 +1,31 @@
 <template>
-    <router-link :to="{ name: 'trip-detail', params: { tripId: 1 } }" class="card">
-        <img src="src/assets/images/trip1.jpg" class="trip-image card-img-top" alt="..." />
+    <router-link :to="{ name: 'trip-detail', params: { tripId: props.trip.id } }" class="card">
+        <img :src="`src/assets/images/${props.trip.images[0]}`" class="trip-image card-img-top" alt="..." />
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
-                <div class="h5 card-title">Rozhledna Mackova hora</div>
+                <div class="h5 card-title">{{props.trip.title}}</div>
                 <div class="card-subtitle mb-2 text-muted">
                     <i class="bi bi-geo-alt-fill"></i>
-                    Nové Strašecí
+                    {{props.trip.location}}
                 </div>
             </div>
             <!-- <p class="card-text">Some text</p> -->
             <div class="d-flex justify-content-between">
-                <div class="d-flex w-50 justify-content-between align-items-start">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                    <i class="bi bi-star"></i>
-                    <i class="bi bi-star"></i>
-                </div>
-                <div class="text-secondary">Trvání 1h</div>
+                <RatingInput :rating="props.trip.rating" :readonly="true" icon="star"></RatingInput>
+                <div class="text-secondary">Trvání {{props.trip.duration}}h</div>
             </div>
         </div>
     </router-link>
 </template>
 
-<script setup></script>
+<script setup>
+import RatingInput from "./RatingInput.vue";
+
+const props = defineProps({
+    trip: Object
+});
+
+</script>
 
 <style scoped>
 .trip-image {
