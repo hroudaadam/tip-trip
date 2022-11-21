@@ -5,7 +5,7 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div v-for="(image, index) in state.trip.images" v-bind:key="image" :class="`carousel-item ${index == 0 ? 'active' : ''}`">
-                            <img :src="`src/assets/images/trips/${image}`" class="trip-main-image img-fluid rounded" alt="..." />
+                            <img :src="getPathToFile(image)" class="trip-main-image img-fluid rounded" alt="..." />
                         </div>
                     </div>
                     <button
@@ -67,14 +67,14 @@
             <div class="col d-flex">
                 <i class="bi bi-clock h3"></i>
                 <div class="flex-column ms-3">
-                    <div class="fw-bolder">{{ state.trip.duration }} h</div>
+                    <div class="fw-bolder">{{ state.trip.duration.toLocaleString() }} h</div>
                     <div class="text-secondary">Trvání</div>
                 </div>
             </div>
             <div class="col d-flex">
                 <i class="bi bi-arrow-up h3"></i>
                 <div class="flex-column ms-3">
-                    <div class="fw-bolder">{{ state.trip.elevation }} m</div>
+                    <div class="fw-bolder">{{ state.trip.elevation.toLocaleString() }} m</div>
                     <div class="text-secondary">Převýšení</div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
             <div class="col d-flex mt-2 mt-lg-0">
                 <i class="bi bi-arrow-right h3"></i>
                 <div class="flex-column ms-3">
-                    <div class="fw-bolder">{{ state.trip.distance }} km</div>
+                    <div class="fw-bolder">{{ state.trip.distance.toLocaleString() }} km</div>
                     <div class="text-secondary">Vzálenost</div>
                 </div>
             </div>
@@ -135,6 +135,10 @@ const deleteTrip = () => {
 
 const rateTrip = (rating) => {
     state.trip.givenRating = rating;
+};
+
+const getPathToFile = (fileName) => {
+    return new URL(`/src/assets/images/trips/${fileName}`, import.meta.url).href;
 };
 
 </script>

@@ -6,7 +6,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <router-link class="navbar-brand" :to="{ name: 'home' }">
-                    <img src="src/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
+                    <img src="@/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
                 </router-link>
 
                 <div class="collapse navbar-collapse" id="navbarNav">

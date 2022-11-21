@@ -1,6 +1,6 @@
 <template>
     <router-link :to="{ name: 'trip-detail', params: { tripId: props.trip.id } }" class="card h-100">
-        <img :src="`src/assets/images/trips/${props.trip.images[0]}`" class="trip-image card-img-top" alt="..." />
+        <img :src="getPathToFile(props.trip.images[0])" class="trip-image card-img-top" alt="..." />
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
                 <div class="h5 card-title">{{props.trip.title}}</div>
@@ -23,6 +23,10 @@ import RatingInput from "./RatingInput.vue";
 const props = defineProps({
     trip: Object
 });
+
+const getPathToFile = (fileName) => {
+    return new URL(`/src/assets/images/trips/${fileName}`, import.meta.url).href;
+};
 
 </script>
 

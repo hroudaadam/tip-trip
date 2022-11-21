@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid">
                 <router-link class="navbar-brand" :to="{ name: 'home' }">
-                    <img src="src/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
+                    <img src="/src/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
                 </router-link>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>

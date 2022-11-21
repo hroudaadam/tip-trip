@@ -14,6 +14,7 @@ export default defineConfig({
         }
     },
     base: process.env.NODE_ENV === "production"
-        ? "./" // prod
+        // ? "./" // prod - dist
+        ? "/public/tip-trip/" // prod 
         : "/", // dev
 });

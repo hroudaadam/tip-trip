@@ -2,7 +2,7 @@
     <div class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="jumbo-image img-fluid rounded" src="src/assets/images/jumbo.png" alt="..." />
+                <img class="jumbo-image img-fluid rounded" src="/src/assets/images/jumbo.png" alt="..." />
                 <div class="jumbo-caption mx-auto carousel-caption d-flex flex-column align-items-stretch">
                     <p class="jumbo-text h3 p-2 rounded d-block">
                         <span class="d-none d-sm-inline"> Tip Trip -&nbsp; </span>

@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { reactive, defineProps, defineEmits } from "vue";
+import { reactive } from "vue";
 
 const emit = defineEmits(["update:modelValue"]);
 
