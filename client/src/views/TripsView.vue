@@ -3,8 +3,8 @@
         <div>
             <div class="d-flex justify-content-between">
                 <form class="d-inline-flex">
-                    <input class="search-input form-control" type="search" placeholder="Hledat" />
-                    <button class="btn btn-primary ms-1" type="submit">
+                    <input class="search-input form-control" type="text" placeholder="Hledat" v-model="state.search" />
+                    <button class="btn btn-primary ms-1">
                         <i class="bi bi-search"></i>
                     </button>
                 </form>
@@ -40,8 +40,13 @@ import { reactive } from "vue";
 import TripCard from "../components/TripCard.vue";
 import store from "../store";
 
+const props = defineProps({
+    search: String,
+});
+
 const state = reactive({
     filter: "all",
+    search: props.search
 });
 
 const filters = [

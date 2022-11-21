@@ -9,8 +9,8 @@
                         Síť plná výletů
                     </p>
                     <form class="jumbo-search-form d-flex w-100">
-                        <input class="form-control me-1 shadow-lg" type="search" placeholder="Hledat trip" />
-                        <button class="btn btn-primary shadow-lg">
+                        <input class="form-control me-1 shadow-lg" type="search" v-model="state.search" placeholder="Hledat" />
+                        <button class="btn btn-primary shadow-lg" v-on:click="searchTrips" >
                             <i class="bi bi-search"></i>
                         </button>
                     </form>
@@ -20,7 +20,24 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { reactive } from "vue";
+import router from "../router";
+
+const state = reactive({
+    search: ""
+});
+
+const searchTrips = () => {
+    if (state.search) {
+        router.push({ name: "trips", query: { search: state.search} });
+    }
+    else {
+        router.push({ name: "trips" });
+    }
+};
+
+</script>
 
 <style scoped>
 .jumbo-caption {

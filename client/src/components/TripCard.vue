@@ -1,6 +1,6 @@
 <template>
-    <router-link :to="{ name: 'trip-detail', params: { tripId: props.trip.id } }" class="card">
-        <img :src="`src/assets/images/${props.trip.images[0]}`" class="trip-image card-img-top" alt="..." />
+    <router-link :to="{ name: 'trip-detail', params: { tripId: props.trip.id } }" class="card h-100">
+        <img :src="`src/assets/images/trips/${props.trip.images[0]}`" class="trip-image card-img-top" alt="..." />
         <div class="card-body d-flex flex-column justify-content-between">
             <div>
                 <div class="h5 card-title">{{props.trip.title}}</div>
@@ -9,9 +9,8 @@
                     {{props.trip.location}}
                 </div>
             </div>
-            <!-- <p class="card-text">Some text</p> -->
             <div class="d-flex justify-content-between">
-                <RatingInput :rating="props.trip.rating" :readonly="true" icon="star"></RatingInput>
+                <RatingInput :model-value="props.trip.rating" :readonly="true" icon="star"></RatingInput>
                 <div class="text-secondary">Trvání {{props.trip.duration}}h</div>
             </div>
         </div>

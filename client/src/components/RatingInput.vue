@@ -1,7 +1,7 @@
 <template>
     <div class="rating-container d-flex justify-content-between align-items-start" v-on:mouseleave="() => selectRating(0)">
         <i
-            :class="`bi bi-${props.icon}${(!state.selecting && r < props.rating) || r < state.inputRating ? '-fill' : ''} 
+            :class="`bi bi-${props.icon}${resolveIconFill(r) ? '-fill' : ''} 
                 ${props.readonly ? '' : 'cursor-pointer'}`"
             v-for="r in Array.from(Array(5).keys())"
             v-bind:key="r"
@@ -12,10 +12,12 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, defineProps, defineEmits } from "vue";
+
+const emit = defineEmits(["update:modelValue"]);
 
 const props = defineProps({
-    rating: Number,
+    modelValue: Number,
     readonly: Boolean,
     icon: String
 });
@@ -33,6 +35,17 @@ const selectRating = (r) => {
 };
 
 const commitRating = (r) => {
+    if (props.readonly) return;
+
+    state.selecting = false;
+    emit("update:modelValue", r);
+};
+
+const resolveIconFill = (index) => {
+    if (state.selecting) {
+        return index < state.inputRating;
+    }
+    return index < props.modelValue;
 };
 
 </script>

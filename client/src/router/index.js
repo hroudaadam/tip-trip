@@ -31,7 +31,8 @@ const router = createRouter({
         {
             path: "/trips",
             name: "trips",
-            component: TripsView
+            component: TripsView,
+            props: route => ({ search: route.query.search || "" })
         },
         {
             path: "/trips/new",

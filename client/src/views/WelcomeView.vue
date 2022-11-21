@@ -9,7 +9,7 @@
             </router-link>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
-            <div class="col py-2 py-lg-0" v-for="trip in store.state.trips" v-bind:key="trip.id">
+            <div class="col py-2 py-lg-0" v-for="trip in store.state.trips.slice(0, 4)" v-bind:key="trip.id">
                 <TripCard :trip="trip"></TripCard>
             </div>
         </div>
