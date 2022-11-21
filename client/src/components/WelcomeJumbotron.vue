@@ -2,7 +2,7 @@
     <div class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="jumbo-image img-fluid rounded" src="/src/assets/images/jumbo.png" alt="..." />
+                <img class="jumbo-image img-fluid rounded" src="/src/assets/images/jumbo.png" alt="Uvítání" />
                 <div class="jumbo-caption mx-auto carousel-caption d-flex flex-column align-items-stretch">
                     <p class="jumbo-text h3 p-2 rounded d-block">
                         <span class="d-none d-sm-inline"> Tip Trip -&nbsp; </span>
@@ -10,7 +10,7 @@
                     </p>
                     <form class="jumbo-search-form d-flex w-100">
                         <input class="form-control me-1 shadow-lg" type="search" v-model="state.search" placeholder="Hledat" />
-                        <button class="btn btn-primary shadow-lg" v-on:click="searchTrips" >
+                        <button class="btn btn-primary shadow-lg" type="button" v-on:click="searchTrips" >
                             <i class="bi bi-search"></i>
                         </button>
                     </form>

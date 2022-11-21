@@ -9,7 +9,7 @@ module.exports = {
         "indent": [1, 4],
         "semi": [1, "always"],
         "vue/html-indent": [1, 4],
-        "vue/script-indent": [1, 4],
+        "vue/script-indent": [1, 4, { "SwitchCase": 1}],
     },
     parserOptions: {
         ecmaVersion: "latest"

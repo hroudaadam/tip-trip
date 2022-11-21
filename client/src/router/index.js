@@ -3,10 +3,8 @@ import store from "../store";
 
 import WelcomeView from "../views/WelcomeView.vue";
 import TripsView from "../views/TripsView.vue";
-import UserTripsView from "../views/UserTripsView.vue";
 import TripFormView from "../views/TripFormView.vue";
 import TripDetailView from "../views/TripDetailView.vue";
-
 import SignInView from "../views/SignInView.vue";
 import SignUpView from "../views/SignUpView.vue";
 import AboutView from "../views/AboutView.vue";
@@ -52,11 +50,6 @@ const router = createRouter({
             component: TripFormView,
             props: true,
             beforeEnter: authenticationGuard
-        },
-        {
-            path: "/my-trips",
-            name: "user-trips",
-            component: UserTripsView
         },
         {
             path: "/sign-in",

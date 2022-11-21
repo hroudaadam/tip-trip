@@ -2,28 +2,28 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container-fluid flex-lg-row-reverse">
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <router-link class="navbar-brand" :to="{ name: 'home' }">
-                    <img src="@/assets/images/logo.png" alt="" height="35" class="d-inline-block align-text-top" />
+                    <img class="d-inline-block align-text-top" src="/src/assets/images/logo.png" alt="Tip Trip logo" height="35" />
                 </router-link>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="d-flex align-items-start flex-column flex-lg-row">
                         <ul class="navbar-nav">
                             <li class="nav-item px-1">
-                                <router-link active-class="nav-link__active" class="nav-link text-body fw-semibold" :to="{ name: 'home' }">
+                                <router-link class="nav-link text-body fw-semibold" active-class="nav-link__active" :to="{ name: 'home' }">
                                     &nbsp;Domů&nbsp;
                                 </router-link>
                             </li>
                             <li class="nav-item px-1">
-                                <router-link active-class="nav-link__active" class="nav-link text-body fw-semibold" :to="{ name: 'trips' }">
+                                <router-link class="nav-link text-body fw-semibold" active-class="nav-link__active" :to="{ name: 'trips' }">
                                     &nbsp;Výlety&nbsp;
                                 </router-link>
                             </li>
                         </ul>
-                        <router-link v-if="!store.getters.isSignedIn" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" :to="{ name: 'sign-in' }">
+                        <router-link class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" v-if="!store.getters.isSignedIn" :to="{ name: 'sign-in' }">
                             Přihlásit
                         </router-link>
                         <div v-else class="btn-group ms-lg-3">
@@ -34,7 +34,7 @@
                                 <p class="fw-semibold">{{store.state.user.userName}}</p>
                                 <p>{{store.state.user.email}}</p>
                                 <hr class="dropdown-divider" />
-                                <button class="dropdown-item" v-on:click="signOut">Odhlásit</button>
+                                <button class="dropdown-item" type="button" v-on:click="signOut">Odhlásit</button>
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,5 @@
 <template>
     <NavigationBar></NavigationBar>
-
     <main class="flex-shrink-0 my-3">
         <div class="container">
             <RouterView/>

@@ -2,15 +2,15 @@
     <div v-if="state.trip != null">
         <div class="row gx-5">
             <div class="col-md-6">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel slide" id="carouselExampleControls" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div v-for="(image, index) in state.trip.images" v-bind:key="image" :class="`carousel-item ${index == 0 ? 'active' : ''}`">
-                            <img :src="getPathToFile(image)" class="trip-main-image img-fluid rounded" alt="..." />
+                        <div :class="`carousel-item ${index == 0 ? 'active' : ''}`" v-for="(image, index) in state.trip.images" v-bind:key="image">
+                            <img :src="getPathToFile(image)" class="trip-main-image img-fluid rounded" alt="Obrázek výletu" />
                         </div>
                     </div>
                     <button
-                        v-if="state.trip.images.length > 1"
                         class="carousel-control-prev"
+                        v-if="state.trip.images.length > 1"
                         data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev"
                     >
@@ -18,8 +18,8 @@
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button
-                        v-if="state.trip.images.length > 1"
                         class="carousel-control-next"
+                        v-if="state.trip.images.length > 1"
                         data-bs-target="#carouselExampleControls"
                         data-bs-slide="next"
                     >
@@ -34,7 +34,7 @@
                     <i class="bi bi-geo-alt-fill"></i>
                     {{ state.trip.location }}
                 </p>
-                <p class="">
+                <p>
                     <span class="fw-semibold">Autor: &nbsp;</span>
                     {{ state.trip.createdBy.userName }}
                 </p>
@@ -44,18 +44,18 @@
             </div>
             <div v-if="store.getters.isSignedIn">
                 <div class="d-flex gap-2 justify-content-end mt-3" v-if="state.trip.createdBy.id == store.state.user.id">
-                    <router-link :to="{ name: 'trip-edit', props: { tripId: state.trip.id } }" class="btn btn-primary px-3">
+                    <router-link class="btn btn-primary px-3" :to="{ name: 'trip-edit', props: { tripId: state.trip.id } }">
                         <i class="bi bi-pencil me-2"></i>
                         Upravit
                     </router-link>
-                    <button class="btn btn-secondary px-3" v-on:click="deleteTrip"><i class="bi bi-x-circle me-2"></i>Odstranit</button>
+                    <button class="btn btn-secondary px-3" type="button" v-on:click="deleteTrip"><i class="bi bi-x-circle me-2"></i>Odstranit</button>
                 </div>
                 <div class="d-flex gap-2 justify-content-end mt-3" v-else>
-                    <button class="btn btn-primary px-3" v-if="!state.trip.inBackpack" v-on:click="changeBackpackStatus">
+                    <button class="btn btn-primary px-3" type="button" v-if="!state.trip.inBackpack" v-on:click="changeBackpackStatus">
                         <i class="bi bi-plus-circle me-2"></i>
                         Do batůžku
                     </button>
-                    <button class="btn btn-secondary px-3" v-else v-on:click="changeBackpackStatus">
+                    <button class="btn btn-secondary px-3" type="button" v-else v-on:click="changeBackpackStatus">
                         <i class="bi bi-x-circle me-2"></i>
                         Z batůžku
                     </button>

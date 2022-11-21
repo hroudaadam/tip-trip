@@ -3,22 +3,22 @@
         <p class="h2 mb-3">Přihlášení</p>
         <div class="row">
             <div class="col-md-3 ms-md-auto">
-                <label for="email" class="form-label">Email</label>
+                <label for="inputEmail" class="form-label">Email</label>
             </div>
             <div class="col-md-9 ms-md-auto">
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+                <input class="form-control" type="email" id="inputEmail" autocomplete="email" />
             </div>
         </div>
         <div class="row mt-3">
             <div class="col-md-3 ms-md-auto">
-                <label for="password" class="form-label">Heslo</label>
+                <label for="inputPassword" class="form-label">Heslo</label>
             </div>
             <div class="col-md-9 ms-md-auto">
-                <input type="password" class="form-control" id="password" />
+                <input class="form-control" type="password" id="inputPassword" autocomplete="current-password" />
             </div>
         </div>
         <div class="d-grid gap-2 mt-3">
-            <button class="btn btn-primary" v-on:click="signIn">Přihlásit se</button>
+            <button class="btn btn-primary" type="button" v-on:click="signIn">Přihlásit se</button>
         </div>
         <div class="mt-3">
             Nemáš účet?&nbsp;
