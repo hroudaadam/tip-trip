@@ -28,7 +28,7 @@
                         </router-link>
                         <div v-else class="btn-group ms-lg-3">
                             <button class="user-profile-btn btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                <i class="h4 bi bi-person"></i>
+                                <i class="user-profile-icon h4 bi bi-person"></i>
                             </button>
                             <div class="dropdown-menu p-3 m-0 dropdown-menu-lg-end">
                                 <p class="fw-semibold">{{store.state.user.userName}}</p>
@@ -77,4 +77,7 @@ const signOut = () => {
     border: none;
 }
 
+.user-profile-icon {
+    line-height: 0.9 !important;
+}
 </style>
