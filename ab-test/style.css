@@ -1,0 +1,103 @@
+a, a:hover, a:active {
+    color: #333333 !important;
+    text-decoration: none !important;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+:root {
+    --bs-primary: #4dd4ac !important;
+}
+
+.nav-link:hover,
+.nav-link__active {
+    text-decoration: underline !important;
+    text-decoration-color: var(--bs-primary) !important;
+    text-decoration-thickness: 3px !important;
+}
+
+.dropdown-menu {
+    min-width: 17.5rem !important;
+}
+.dropdown-toggle::after {
+    display: none !important;
+}
+.dropdown-item:active {
+    background-color: var(--bs-secondary) !important;
+}
+.user-profile-btn:focus,
+.user-profile-btn:active {
+    border: none !important;
+}
+
+.user-profile-icon {
+    line-height: 0.9 !important;
+}
+
+nav {
+    display: flex !important;
+    gap: 1rem !important;
+}
+
+.rating-container {
+    min-width: 6em;
+    max-width: 8em;
+}
+
+.trip-image {
+    height: 12rem;
+    object-fit: cover;
+}
+
+.btn {
+    border-radius: 20rem !important;
+    font-weight: 600 !important;
+}
+
+
+.btn-primary {
+    background-color: #4dd4ac !important;
+    border-color: #4dd4ac !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus-visible {
+    color: white !important;
+}
+
+@media screen and (min-width: 768px) {
+    .search-input {
+        min-width: 350px;
+    }
+}
+
+.filter-item {
+    background: none;
+    border: none;
+    padding: 0;
+    display: inline;
+}
+
+.filter-item__active {
+    text-decoration: underline;
+    text-decoration-color: var(--bs-primary);
+    text-decoration-thickness: 3px;
+}
+.testimonial-group {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.testimonial-group {
+    display: inline-block;
+}
