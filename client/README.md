@@ -13,6 +13,3 @@ Postup pro možnost lokálního vývoje
 - nainstalovat požadované balíčky (npm install)
 - spustit vývojový server (npm run dev)
 - server by měl být spuštěn na adrese  http://localhost:5173/
-
-
-## Úkoly

@@ -1,5 +1,5 @@
 <template>
-    <p class="h2">{{ state.formMode == "new" ? "Nový" : "Upravit" }} výlet</p>
+    <h1 class="h2">{{ state.formMode == "new" ? "Nový" : "Upravit" }} výlet</h1>
     <form class="mt-3">
         <div class="row">
             <div class="col-md-3 ms-md-auto">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <p class="h4 mt-4">Další informace</p>
+        <h2 class="h4 mt-4">Další informace</h2>
         <div class="row gx-5 row-cols-2 mt-3">
             <div class="col">
                 <div class="row">

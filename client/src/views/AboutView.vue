@@ -1,5 +1,5 @@
 <template>
-    <p class="h2">Něco málo o Tip Tripu</p>
+    <h1 class="h2">Něco málo o Tip Tripu</h1>
     <p class="mt-3">
         Webová aplikace Tip Trip je určena pro nadšené turisty i pro občasné výletníky, kteří hledají rady od zkušenějších. Jedná se o stránku, kam
         mohou uživatelé přidávat tipy na výlety, které absolvovali, jejich charakteristiku a popis trasy. Tyto výlety si následně mohou ostatní

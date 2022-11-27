@@ -2,7 +2,7 @@
     <WelcomeJumbotron></WelcomeJumbotron>
     <div class="mt-5">
         <div class="d-flex justify-content-between align-items-center">
-            <p class="h2">Populární výlety</p>
+            <h1 class="h2">Populární výlety</h1>
             <router-link :to="{ name: 'trips' }">
                 Více
                 <i class="bi bi-caret-right"></i>

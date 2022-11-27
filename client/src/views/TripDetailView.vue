@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-md-6 mt-3 mt-lg-0">
-                <p class="h2">{{ state.trip.title }}</p>
+                <h1 class="h2">{{ state.trip.title }}</h1>
                 <p class="text-muted">
                     <i class="bi bi-geo-alt-fill"></i>
                     {{ state.trip.location }}

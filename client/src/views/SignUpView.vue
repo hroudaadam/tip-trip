@@ -1,6 +1,6 @@
 <template>
     <form class="sign-in-form mx-auto">
-        <p class="h2 mb-3">Vytvoření účtu</p>
+        <h1 class="h2 mb-3">Vytvoření účtu</h1>
         <div class="row">
             <div class="col-md-3 ms-md-auto">
                 <label class="form-label" for="inputUserName">Uživatelské jméno</label>
