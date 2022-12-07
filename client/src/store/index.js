@@ -137,7 +137,7 @@ const store = createStore({
                         "trip6_2.jpg",
                         "trip6_3.jpg"
                     ],
-                    inBackpack: true
+                    inBackpack: false
                 },
                 {
                     id: 7,
